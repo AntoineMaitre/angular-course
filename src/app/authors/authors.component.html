@@ -1,4 +1,30 @@
 <h2>{{authors.length}} Authors</h2>
+<!--attribute, class, style bindings-->
+<!--<button class="btn btn-primary" [class.active]="isActive" [style.backgroundColor]="isActive ? 'blue' : 'red'">Save</button>-->
+
+<!--Template variable example-->
+<!--<input #email (keyup.enter)="onKeyUp(email.value)" placeholder="Template variable"/>-->
+
+<!--Event filtering (on ENTER)-->
+<!--<input (keyup.enter)="onKeyUp($event)" placeholder="Event filtering"/>-->
+
+<!--two way binding-->
+<input [value]="email" (keyup.enter)="email = $event.target.value; onKeyUp()" placeholder="2-way binding"/>
+<input [(ngModel)]="email" (keyup.enter)="onKeyUp()" placeholder="2-way binding"/>
+
+
+<!--Event binding-->
+<div (click)="onDivClick()">
+  <button (click)="onSave($event)">Save</button>
+</div>
+
+<!--Property binding-->
+<img [src]="imageUrl"/>
+<table>
+  <tr>
+    <td [attr.colspan]="colSpan"></td>
+  </tr>
+</table>
 <ul>
   <li *ngFor="let author of authors">
     {{author}}
