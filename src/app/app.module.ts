@@ -9,6 +9,8 @@ import {AuthorsComponent} from './authors/authors.component';
 import {AuthorsService} from './authors/authors.service';
 import {FormsModule} from '@angular/forms';
 import {SummaryPipe} from './summary.pipe';
+import {InputComponentComponent} from './input-component/input-component.component';
+import {FormatInputPipe} from "./formatInput.pipe";
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {SummaryPipe} from './summary.pipe';
     CoursesComponent,
     CourseComponent,
     AuthorsComponent,
-    SummaryPipe
+    SummaryPipe,
+    FormatInputPipe,
+    InputComponentComponent
   ],
   imports: [
     BrowserModule,
